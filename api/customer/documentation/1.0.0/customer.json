@@ -638,6 +638,9 @@
               "customer": {
                 "type": "string"
               },
+              "driver": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

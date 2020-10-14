@@ -1287,6 +1287,43 @@
                 "type": "string"
               }
             }
+          },
+          "driver": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "CI": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "user_id": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1326,6 +1363,9 @@
             "type": "string"
           },
           "customer": {
+            "type": "string"
+          },
+          "driver": {
             "type": "string"
           },
           "created_by": {

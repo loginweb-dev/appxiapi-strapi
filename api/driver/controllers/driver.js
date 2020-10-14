@@ -5,9 +5,4 @@
  * to customize this controller
  */
 
-  
-module.exports = {
-    async index(ctx) {
-        return 'Hello World!';
-      },
-};
+module.exports = {};

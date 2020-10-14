@@ -57,6 +57,10 @@
     "customer": {
       "via": "user_id",
       "model": "customer"
+    },
+    "driver": {
+      "via": "user_id",
+      "model": "driver"
     }
   }
 }
