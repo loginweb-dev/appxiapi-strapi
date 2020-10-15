@@ -1277,6 +1277,9 @@
               "user_id": {
                 "type": "string"
               },
+              "locality_id": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "datetime"
               },
@@ -1313,6 +1316,12 @@
               },
               "user_id": {
                 "type": "string"
+              },
+              "vehicles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "datetime"

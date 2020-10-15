@@ -649,6 +649,31 @@
               }
             }
           },
+          "locality_id": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "customer": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "datetime"
           }
@@ -669,6 +694,9 @@
             "type": "integer"
           },
           "user_id": {
+            "type": "string"
+          },
+          "locality_id": {
             "type": "string"
           },
           "published_at": {

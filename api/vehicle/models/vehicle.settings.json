@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "name": "Vehicle",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "vehicle_type": {
+      "type": "enumeration",
+      "enum": [
+        "Automovil",
+        "Motocicleta"
+      ]
+    },
+    "plaque": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "driver_id": {
+      "model": "driver",
+      "via": "vehicles"
+    }
+  }
+}

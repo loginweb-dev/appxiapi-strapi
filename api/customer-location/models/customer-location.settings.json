@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_locations",
+  "info": {
+    "name": "Customer_location"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_id": {
+      "model": "customer"
+    },
+    "location_id": {
+      "model": "location",
+      "via": "customer_location"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "logitude": {
+      "type": "string"
+    }
+  }
+}

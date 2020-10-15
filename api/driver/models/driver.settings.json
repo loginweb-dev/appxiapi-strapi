@@ -38,6 +38,10 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "driver"
+    },
+    "vehicles": {
+      "via": "driver_id",
+      "collection": "vehicle"
     }
   }
 }

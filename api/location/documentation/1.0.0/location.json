@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/drivers": {
+    "/locations": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Driver"
+                    "$ref": "#/components/schemas/Location"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Location"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDriver"
+                "$ref": "#/components/schemas/NewLocation"
               }
             }
           }
         }
       }
     },
-    "/drivers/count": {
+    "/locations/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "parameters": []
       }
     },
-    "/drivers/{id}": {
+    "/locations/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Location"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Location"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDriver"
+                "$ref": "#/components/schemas/NewLocation"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Location"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Driver": {
+      "Location": {
         "required": [
           "id"
         ],
@@ -522,167 +522,43 @@
           "id": {
             "type": "string"
           },
-          "first_name": {
+          "title": {
             "type": "string"
           },
-          "last_name": {
+          "latitude": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
+          "logintude": {
             "type": "string"
           },
-          "avatar": {
+          "customer_location": {
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "customer_id": {
                 "type": "string"
               },
-              "alternativeText": {
+              "location_id": {
                 "type": "string"
               },
-              "caption": {
+              "latitude": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "logitude": {
                 "type": "string"
               },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
+              "published_at": {
+                "type": "datetime"
               },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "user_id": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "customer": {
-                "type": "string"
-              },
-              "driver": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "vehicle_type": {
-                  "type": "string"
-                },
-                "plaque": {
-                  "type": "string"
-                },
-                "model": {
-                  "type": "string"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "driver_id": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -691,28 +567,19 @@
           }
         }
       },
-      "NewDriver": {
+      "NewLocation": {
         "properties": {
-          "first_name": {
+          "title": {
             "type": "string"
           },
-          "last_name": {
+          "latitude": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
+          "logintude": {
             "type": "string"
           },
-          "user_id": {
+          "customer_location": {
             "type": "string"
-          },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "datetime"
@@ -729,7 +596,7 @@
   },
   "tags": [
     {
-      "name": "Driver"
+      "name": "Location"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/drivers": {
+    "/customer-locations": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Driver"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Customer-location"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Driver"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDriver"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/drivers/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Customer-location"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCustomer-location"
+              }
+            }
+          }
+        }
       }
     },
-    "/drivers/{id}": {
+    "/customer-locations/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Customer-location"
+        ],
+        "parameters": []
+      }
+    },
+    "/customer-locations/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Customer-location"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Customer-location"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDriver"
+                "$ref": "#/components/schemas/NewCustomer-location"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Customer-location"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Driver": {
+      "Customer-location": {
         "required": [
           "id"
         ],
@@ -522,76 +535,37 @@
           "id": {
             "type": "string"
           },
-          "first_name": {
-            "type": "string"
-          },
-          "last_name": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
-            "type": "string"
-          },
-          "avatar": {
+          "customer_id": {
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "first_name": {
                 "type": "string"
               },
-              "alternativeText": {
+              "last_name": {
                 "type": "string"
               },
-              "caption": {
+              "document": {
                 "type": "string"
               },
-              "width": {
+              "phone": {
                 "type": "integer"
               },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "avatar": {
                 "type": "string"
               },
-              "ext": {
+              "user_id": {
                 "type": "string"
               },
-              "mime": {
+              "locality_id": {
                 "type": "string"
               },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
+              "published_at": {
+                "type": "datetime"
               },
               "created_by": {
                 "type": "string"
@@ -601,45 +575,28 @@
               }
             }
           },
-          "user_id": {
+          "location_id": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "title": {
                 "type": "string"
               },
-              "email": {
+              "latitude": {
                 "type": "string"
               },
-              "provider": {
+              "logintude": {
                 "type": "string"
               },
-              "password": {
+              "customer_location": {
                 "type": "string"
               },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "customer": {
-                "type": "string"
-              },
-              "driver": {
-                "type": "string"
+              "published_at": {
+                "type": "datetime"
               },
               "created_by": {
                 "type": "string"
@@ -649,70 +606,30 @@
               }
             }
           },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "vehicle_type": {
-                  "type": "string"
-                },
-                "plaque": {
-                  "type": "string"
-                },
-                "model": {
-                  "type": "string"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "driver_id": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "latitude": {
+            "type": "string"
+          },
+          "logitude": {
+            "type": "string"
           },
           "published_at": {
             "type": "datetime"
           }
         }
       },
-      "NewDriver": {
+      "NewCustomer-location": {
         "properties": {
-          "first_name": {
+          "customer_id": {
             "type": "string"
           },
-          "last_name": {
+          "location_id": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
+          "latitude": {
             "type": "string"
           },
-          "user_id": {
+          "logitude": {
             "type": "string"
-          },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "datetime"
@@ -727,9 +644,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Driver"
-    }
-  ]
+  "tags": []
 }

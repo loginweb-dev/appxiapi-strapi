@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/drivers": {
+    "/vehicles": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Driver"
+                    "$ref": "#/components/schemas/Vehicle"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Vehicle"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDriver"
+                "$ref": "#/components/schemas/NewVehicle"
               }
             }
           }
         }
       }
     },
-    "/drivers/count": {
+    "/vehicles/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "parameters": []
       }
     },
-    "/drivers/{id}": {
+    "/vehicles/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Vehicle"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Driver"
+                  "$ref": "#/components/schemas/Vehicle"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDriver"
+                "$ref": "#/components/schemas/NewVehicle"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Driver"
+          "Vehicle"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Driver": {
+      "Vehicle": {
         "required": [
           "id"
         ],
@@ -522,167 +522,62 @@
           "id": {
             "type": "string"
           },
-          "first_name": {
+          "vehicle_type": {
+            "type": "string",
+            "enum": [
+              "Automovil",
+              "Motocicleta"
+            ]
+          },
+          "plaque": {
             "type": "string"
           },
-          "last_name": {
+          "model": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
+          "brand": {
             "type": "string"
           },
-          "avatar": {
+          "driver_id": {
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "first_name": {
                 "type": "string"
               },
-              "alternativeText": {
+              "last_name": {
                 "type": "string"
               },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
+              "phone": {
                 "type": "integer"
               },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "CI": {
                 "type": "string"
               },
-              "ext": {
+              "avatar": {
                 "type": "string"
               },
-              "mime": {
+              "user_id": {
                 "type": "string"
               },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "user_id": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "customer": {
-                "type": "string"
-              },
-              "driver": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "vehicle_type": {
-                  "type": "string"
-                },
-                "plaque": {
-                  "type": "string"
-                },
-                "model": {
-                  "type": "string"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "driver_id": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+              "vehicles": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -691,28 +586,26 @@
           }
         }
       },
-      "NewDriver": {
+      "NewVehicle": {
         "properties": {
-          "first_name": {
+          "vehicle_type": {
+            "type": "string",
+            "enum": [
+              "Automovil",
+              "Motocicleta"
+            ]
+          },
+          "plaque": {
             "type": "string"
           },
-          "last_name": {
+          "model": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
-          "CI": {
+          "brand": {
             "type": "string"
           },
-          "user_id": {
+          "driver_id": {
             "type": "string"
-          },
-          "vehicles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "datetime"
@@ -729,7 +622,7 @@
   },
   "tags": [
     {
-      "name": "Driver"
+      "name": "Vehicle"
     }
   ]
 }

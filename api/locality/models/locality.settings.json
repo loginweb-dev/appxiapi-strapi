@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localities",
+  "info": {
+    "name": "Locality"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "customer": {
+      "via": "locality_id",
+      "model": "customer"
+    }
+  }
+}
