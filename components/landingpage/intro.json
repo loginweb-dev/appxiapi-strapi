@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_landingpage_intros",
+  "info": {
+    "name": "intro",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "btn_name1": {
+      "type": "string"
+    },
+    "btn_link1": {
+      "type": "string"
+    },
+    "btn_name2": {
+      "type": "string"
+    },
+    "btn_link2": {
+      "type": "string"
+    }
+  }
+}

@@ -531,9 +531,6 @@
           "document": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
           "avatar": {
             "required": [
               "id",
@@ -605,7 +602,8 @@
             "required": [
               "id",
               "username",
-              "email"
+              "email",
+              "phone"
             ],
             "properties": {
               "id": {
@@ -641,6 +639,9 @@
               "driver": {
                 "type": "string"
               },
+              "phone": {
+                "type": "integer"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -674,6 +675,45 @@
               }
             }
           },
+          "customer_locations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "latitude",
+                "longitude"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "published_at": {
+                  "type": "datetime"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "datetime"
           }
@@ -690,14 +730,17 @@
           "document": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
           "user_id": {
             "type": "string"
           },
           "locality_id": {
             "type": "string"
+          },
+          "customer_locations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "datetime"

@@ -17,9 +17,6 @@
     "last_name": {
       "type": "string"
     },
-    "phone": {
-      "type": "biginteger"
-    },
     "CI": {
       "type": "string"
     },
@@ -35,13 +32,13 @@
       "required": false
     },
     "user_id": {
+      "via": "driver",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "driver"
+      "model": "user"
     },
     "vehicles": {
-      "via": "driver_id",
-      "collection": "vehicle"
+      "collection": "vehicle",
+      "via": "driver_id"
     }
   }
 }

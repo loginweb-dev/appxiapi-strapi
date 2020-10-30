@@ -1188,7 +1188,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "id": {
@@ -1268,9 +1269,6 @@
               "document": {
                 "type": "string"
               },
-              "phone": {
-                "type": "integer"
-              },
               "avatar": {
                 "type": "string"
               },
@@ -1279,6 +1277,12 @@
               },
               "locality_id": {
                 "type": "string"
+              },
+              "customer_locations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "datetime"
@@ -1305,9 +1309,6 @@
               "last_name": {
                 "type": "string"
               },
-              "phone": {
-                "type": "integer"
-              },
               "CI": {
                 "type": "string"
               },
@@ -1333,13 +1334,17 @@
                 "type": "string"
               }
             }
+          },
+          "phone": {
+            "type": "integer"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "username": {
@@ -1376,6 +1381,9 @@
           },
           "driver": {
             "type": "string"
+          },
+          "phone": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"

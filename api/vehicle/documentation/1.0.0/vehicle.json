@@ -552,9 +552,6 @@
               "last_name": {
                 "type": "string"
               },
-              "phone": {
-                "type": "integer"
-              },
               "CI": {
                 "type": "string"
               },

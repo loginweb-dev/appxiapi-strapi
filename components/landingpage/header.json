@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_landingpage_headers",
+  "info": {
+    "name": "Header",
+    "icon": "money-check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Navbar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landingpage.navbar"
+    },
+    "Intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landingpage.intro"
+    }
+  }
+}

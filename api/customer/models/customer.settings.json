@@ -20,9 +20,6 @@
     "document": {
       "type": "string"
     },
-    "phone": {
-      "type": "biginteger"
-    },
     "avatar": {
       "model": "file",
       "via": "related",
@@ -33,13 +30,17 @@
       "required": false
     },
     "user_id": {
+      "via": "customer",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "customer"
+      "model": "user"
     },
     "locality_id": {
       "model": "locality",
       "via": "customer"
+    },
+    "customer_locations": {
+      "via": "customer",
+      "collection": "customer-location"
     }
   }
 }

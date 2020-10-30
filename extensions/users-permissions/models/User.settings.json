@@ -55,12 +55,17 @@
       "configurable": false
     },
     "customer": {
-      "via": "user_id",
-      "model": "customer"
+      "model": "customer",
+      "via": "user_id"
     },
     "driver": {
-      "via": "user_id",
-      "model": "driver"
+      "model": "driver",
+      "via": "user_id"
+    },
+    "phone": {
+      "type": "integer",
+      "unique": true,
+      "required": true
     }
   }
 }

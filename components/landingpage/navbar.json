@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_landingpage_navbars",
+  "info": {
+    "name": "Navbar",
+    "icon": "list-alt"
+  },
+  "options": {},
+  "attributes": {
+    "brand": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "link2": {
+      "type": "string"
+    },
+    "link3": {
+      "type": "string"
+    }
+  }
+}

@@ -528,9 +528,6 @@
           "last_name": {
             "type": "string"
           },
-          "phone": {
-            "type": "integer"
-          },
           "CI": {
             "type": "string"
           },
@@ -605,7 +602,8 @@
             "required": [
               "id",
               "username",
-              "email"
+              "email",
+              "phone"
             ],
             "properties": {
               "id": {
@@ -640,6 +638,9 @@
               },
               "driver": {
                 "type": "string"
+              },
+              "phone": {
+                "type": "integer"
               },
               "created_by": {
                 "type": "string"
@@ -698,9 +699,6 @@
           },
           "last_name": {
             "type": "string"
-          },
-          "phone": {
-            "type": "integer"
           },
           "CI": {
             "type": "string"

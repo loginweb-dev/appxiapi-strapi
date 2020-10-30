@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "locations",
   "info": {
-    "name": "Location"
+    "name": "Location",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,17 +12,17 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "latitude": {
-      "type": "string"
-    },
-    "logintude": {
-      "type": "string"
-    },
-    "customer_location": {
-      "via": "location_id",
-      "model": "customer-location"
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

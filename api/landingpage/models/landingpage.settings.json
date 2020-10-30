@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "landingpages",
+  "info": {
+    "name": "Landingpage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "landingpage.header"
+    }
+  }
+}

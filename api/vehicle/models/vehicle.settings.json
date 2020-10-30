@@ -28,8 +28,8 @@
       "type": "string"
     },
     "driver_id": {
-      "model": "driver",
-      "via": "vehicles"
+      "via": "vehicles",
+      "model": "driver"
     }
   }
 }

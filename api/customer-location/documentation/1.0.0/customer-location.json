@@ -529,13 +529,44 @@
     "schemas": {
       "Customer-location": {
         "required": [
-          "id"
+          "id",
+          "latitude",
+          "longitude"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "customer_id": {
+          "direction": {
+            "type": "string"
+          },
+          "location": {
+            "required": [
+              "id",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "customer": {
             "required": [
               "id"
             ],
@@ -552,9 +583,6 @@
               "document": {
                 "type": "string"
               },
-              "phone": {
-                "type": "integer"
-              },
               "avatar": {
                 "type": "string"
               },
@@ -564,36 +592,11 @@
               "locality_id": {
                 "type": "string"
               },
-              "published_at": {
-                "type": "datetime"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "location_id": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "string"
-              },
-              "logintude": {
-                "type": "string"
-              },
-              "customer_location": {
-                "type": "string"
+              "customer_locations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "datetime"
@@ -607,10 +610,10 @@
             }
           },
           "latitude": {
-            "type": "string"
+            "type": "number"
           },
-          "logitude": {
-            "type": "string"
+          "longitude": {
+            "type": "number"
           },
           "published_at": {
             "type": "datetime"
@@ -618,18 +621,25 @@
         }
       },
       "NewCustomer-location": {
+        "required": [
+          "latitude",
+          "longitude"
+        ],
         "properties": {
-          "customer_id": {
+          "direction": {
             "type": "string"
           },
-          "location_id": {
+          "location": {
+            "type": "string"
+          },
+          "customer": {
             "type": "string"
           },
           "latitude": {
-            "type": "string"
+            "type": "number"
           },
-          "logitude": {
-            "type": "string"
+          "longitude": {
+            "type": "number"
           },
           "published_at": {
             "type": "datetime"

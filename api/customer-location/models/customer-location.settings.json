@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "customer_locations",
   "info": {
-    "name": "Customer_location"
+    "name": "Customer_location",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,18 +11,23 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "customer_id": {
-      "model": "customer"
+    "direction": {
+      "type": "text"
     },
-    "location_id": {
-      "model": "location",
-      "via": "customer_location"
+    "location": {
+      "model": "location"
+    },
+    "customer": {
+      "model": "customer",
+      "via": "customer_locations"
     },
     "latitude": {
-      "type": "string"
+      "type": "float",
+      "required": true
     },
-    "logitude": {
-      "type": "string"
+    "longitude": {
+      "type": "float",
+      "required": true
     }
   }
 }
