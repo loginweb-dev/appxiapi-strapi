@@ -17,28 +17,18 @@
     "last_name": {
       "type": "string"
     },
-    "CI": {
-      "type": "string"
-    },
-    "avatar": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "user_id": {
-      "via": "driver",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "driver"
     },
     "vehicles": {
-      "collection": "vehicle",
-      "via": "driver_id"
+      "via": "driver_id",
+      "collection": "vehicle"
+    },
+    "document_drive": {
+      "via": "driver",
+      "model": "document-drive"
     }
   }
 }

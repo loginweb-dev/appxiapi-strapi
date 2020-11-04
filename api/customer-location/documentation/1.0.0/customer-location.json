@@ -615,6 +615,36 @@
           "longitude": {
             "type": "number"
           },
+          "service": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "customer_locations_id": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "favorite": {
+            "type": "boolean",
+            "default": false
+          },
+          "store": {
+            "type": "boolean",
+            "default": false
+          },
           "published_at": {
             "type": "datetime"
           }
@@ -640,6 +670,17 @@
           },
           "longitude": {
             "type": "number"
+          },
+          "service": {
+            "type": "string"
+          },
+          "favorite": {
+            "type": "boolean",
+            "default": false
+          },
+          "store": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "datetime"

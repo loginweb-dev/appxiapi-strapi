@@ -28,6 +28,18 @@
     "longitude": {
       "type": "float",
       "required": true
+    },
+    "service": {
+      "model": "service",
+      "via": "customer_locations_id"
+    },
+    "favorite": {
+      "type": "boolean",
+      "default": false
+    },
+    "store": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

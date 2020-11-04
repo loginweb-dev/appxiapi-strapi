@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "vehicles",
+  "collectionName": "document_vehicles",
   "info": {
-    "name": "Vehicle",
+    "name": "Document_vehicle",
     "description": ""
   },
   "options": {
@@ -11,34 +11,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "vehicle_type": {
+    "type": {
       "type": "enumeration",
       "enum": [
-        "Automovil",
-        "Motocicleta"
+        "carnetPropiedad",
+        "poliza"
       ]
     },
-    "plaque": {
+    "nro": {
       "type": "string"
     },
-    "model": {
-      "type": "string"
-    },
-    "brand": {
-      "type": "string"
-    },
-    "driver_id": {
-      "model": "driver",
-      "via": "vehicles"
-    },
-    "document_vehicle": {
-      "via": "vehicle",
-      "model": "document-vehicle"
-    },
-    "color": {
-      "type": "string"
-    },
-    "photo": {
+    "image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -48,6 +31,13 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "options": {
+      "type": "json"
+    },
+    "vehicle": {
+      "model": "vehicle",
+      "via": "document_vehicle"
     }
   }
 }
