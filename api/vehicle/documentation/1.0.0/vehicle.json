@@ -552,12 +552,6 @@
               "last_name": {
                 "type": "string"
               },
-              "CI": {
-                "type": "string"
-              },
-              "avatar": {
-                "type": "string"
-              },
               "user_id": {
                 "type": "string"
               },
@@ -567,6 +561,9 @@
                   "type": "string"
                 }
               },
+              "document_drive": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "datetime"
               },
@@ -575,6 +572,116 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "document_vehicle": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "nro": {
+                "type": "string"
+              },
+              "image": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "options": {
+                "type": "object"
+              },
+              "vehicle": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "color": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -602,6 +709,12 @@
             "type": "string"
           },
           "driver_id": {
+            "type": "string"
+          },
+          "document_vehicle": {
+            "type": "string"
+          },
+          "color": {
             "type": "string"
           },
           "published_at": {

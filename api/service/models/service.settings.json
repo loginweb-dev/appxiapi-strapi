@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_locations_id": {
+      "via": "service",
+      "model": "customer-location"
+    }
+  }
+}

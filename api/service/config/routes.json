@@ -2,56 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/customers",
-      "handler": "customer.find",
+      "path": "/services",
+      "handler": "service.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/customers/count",
-      "handler": "customer.count",
+      "path": "/services/count",
+      "handler": "service.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/customers/:id",
-      "handler": "customer.findOne",
+      "path": "/services/:id",
+      "handler": "service.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/customers",
-      "handler": "customer.create",
+      "path": "/services",
+      "handler": "service.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/customers/:id",
-      "handler": "customer.update",
+      "path": "/services/:id",
+      "handler": "service.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/customers/:id",
-      "handler": "customer.delete",
+      "path": "/services/:id",
+      "handler": "service.delete",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/customers/auth/social",
-      "handler": "customer.authSocial",
+      "path": "/services/customer",
+      "handler": "service.createCustomer",
       "config": {
         "policies": []
       }

@@ -528,82 +528,11 @@
           "last_name": {
             "type": "string"
           },
-          "CI": {
-            "type": "string"
-          },
-          "avatar": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "user_id": {
             "required": [
               "id",
               "username",
-              "email",
-              "phone"
+              "email"
             ],
             "properties": {
               "id": {
@@ -675,6 +604,18 @@
                 "driver_id": {
                   "type": "string"
                 },
+                "document_vehicle": {
+                  "type": "string"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "datetime"
                 },
@@ -684,6 +625,43 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "document_drive": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nro": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "photo": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "options": {
+                "type": "object"
+              },
+              "driver": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -700,9 +678,6 @@
           "last_name": {
             "type": "string"
           },
-          "CI": {
-            "type": "string"
-          },
           "user_id": {
             "type": "string"
           },
@@ -711,6 +686,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "document_drive": {
+            "type": "string"
           },
           "published_at": {
             "type": "datetime"

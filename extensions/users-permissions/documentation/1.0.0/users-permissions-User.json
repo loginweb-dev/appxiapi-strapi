@@ -1188,8 +1188,7 @@
         "required": [
           "id",
           "username",
-          "email",
-          "phone"
+          "email"
         ],
         "properties": {
           "id": {
@@ -1309,12 +1308,6 @@
               "last_name": {
                 "type": "string"
               },
-              "CI": {
-                "type": "string"
-              },
-              "avatar": {
-                "type": "string"
-              },
               "user_id": {
                 "type": "string"
               },
@@ -1323,6 +1316,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "document_drive": {
+                "type": "string"
               },
               "published_at": {
                 "type": "datetime"
@@ -1343,8 +1339,7 @@
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email",
-          "phone"
+          "email"
         ],
         "properties": {
           "username": {

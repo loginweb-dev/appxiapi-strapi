@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "document_drives",
+  "info": {
+    "name": "Document_drive",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nro": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "CI",
+        "Breve",
+        "Pasaporte",
+        "LibretaMilitar"
+      ]
+    },
+    "photo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "options": {
+      "type": "json"
+    },
+    "driver": {
+      "model": "driver",
+      "via": "document_drive"
+    }
+  }
+}

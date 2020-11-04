@@ -59,13 +59,13 @@
       "via": "user_id"
     },
     "driver": {
-      "model": "driver",
-      "via": "user_id"
+      "via": "user_id",
+      "model": "driver"
     },
     "phone": {
       "type": "integer",
-      "unique": true,
-      "required": true
+      "unique": false,
+      "required": false
     }
   }
 }
