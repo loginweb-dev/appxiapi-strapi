@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/drivers/auth/social",
+      "handler": "driver.authSocial",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

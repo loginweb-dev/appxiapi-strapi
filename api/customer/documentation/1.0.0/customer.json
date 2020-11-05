@@ -522,25 +522,7 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "first_name": {
-                      "type": "string"
-                    },
-                    "last_name": {
-                      "type": "string"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "codePhone": {
-                      "type": "string"
-                    },
-                    "numberPhone": {
-                      "type": "string"
-                    },
-                    "avatar": {
+                    "foo": {
                       "type": "string"
                     }
                   }
@@ -590,13 +572,7 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "first_name": {
-                    "type": "string"
-                  },
-                  "last_name": {
+                  "foo": {
                     "type": "string"
                   }
                 }
